@@ -107,13 +107,14 @@ article h1, article h2 {
   color: var(--accent);
 }
 
-/* Constrain large item photos on item pages */
+/* Constrain large item photos on item pages (reduced size) */
 article img {
   display: block;
   width: 100%;
-  max-width: 640px;     /* limit large widths */
-  max-height: 420px;    /* limit tall images */
-  object-fit: cover;    /* crop if necessary while preserving fill */
+  max-width: 480px;    /* reduced max width */
+  max-height: 320px;   /* reduced max height */
+  height: auto;        /* keep aspect ratio */
+  object-fit: cover;
   border-radius: 8px;
   margin: 0.75rem auto; /* center the image */
 }
@@ -122,7 +123,7 @@ article img {
 .item-photo {
   display: block;
   width: 100%;
-  max-width: 640px;
+  max-width: 480px;
   height: auto;
   border-radius: 8px;
   margin: 0.75rem auto;
