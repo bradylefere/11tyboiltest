@@ -109,24 +109,38 @@ article h1, article h2 {
 
 /* Constrain large item photos on item pages (size ~ text width) */
 article img {
-  display: block;
-  width: auto;            /* let image keep aspect ratio */
-  max-width: 42ch;       /* limit width to ~one line of text */
-  max-height: 40vh;      /* prevent very tall images on small screens */
+  display: inline-block;
+  float: left;               /* let text wrap beside the image */
+  width: auto;               /* preserve aspect ratio */
+  max-width: 36ch;          /* ~paragraph-width */
+  max-height: 36vh;         /* prevent very tall images */
   height: auto;
   object-fit: cover;
   border-radius: 8px;
-  margin: 0.75rem 0;     /* sit inline with text flow */
+  margin: 0 1rem 0.75rem 0;  /* space between image and text */
 }
 
 /* Optional explicit class for smaller images in content */
 .item-photo {
   display: inline-block;
+  float: left;
   width: auto;
-  max-width: 42ch;
+  max-width: 36ch;
   height: auto;
   border-radius: 8px;
-  margin: 0 0.5rem 0.75rem 0;
+  margin: 0 1rem 0.75rem 0;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 640px) {
+  article img,
+  .item-photo {
+    float: none;
+    display: block;
+    margin: 0.75rem auto;
+    max-width: 80%;
+    max-height: 30vh;
+  }
 }
 
 /* Footer */
