@@ -1,0 +1,23 @@
+{
+  "title": "Everyday Carry Essentials",
+  "description": "A curated selection of essential items for everyday carry, focusing on practicality and utility.",
+  "items": [
+    {
+      "name": "Pocket Knife",
+      "url": "/items/pocket-knife/"
+    },
+    {
+      "name": "Wallet",
+      "url": "/items/wallet/"
+    },
+    {
+      "name": "Flashlight",
+      "url": "/items/flashlight/"
+    }
+  ],
+  "author": "Your Name",
+  "social": {
+    "twitter": "your_twitter_handle",
+    "github": "your_github_username"
+  }
+}

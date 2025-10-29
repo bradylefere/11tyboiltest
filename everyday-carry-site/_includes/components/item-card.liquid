@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ item.title }}</title>
+  <link rel="stylesheet" href="/styles/screen.css">
+</head>
+<body>
+  <div class="item-card">
+    <h2>{{ item.title }}</h2>
+    <img src="{{ item.image }}" alt="{{ item.title }}" />
+    <p>{{ item.description }}</p>
+    <h3>Why it's essential:</h3>
+    <p>{{ item.importance }}</p>
+    <a href="{{ item.link }}" class="btn">Learn More</a>
+  </div>
+</body>
+</html>
