@@ -107,26 +107,26 @@ article h1, article h2 {
   color: var(--accent);
 }
 
-/* Constrain large item photos on item pages (reduced size) */
+/* Constrain large item photos on item pages (size ~ text width) */
 article img {
   display: block;
-  width: 100%;
-  max-width: 480px;    /* reduced max width */
-  max-height: 320px;   /* reduced max height */
-  height: auto;        /* keep aspect ratio */
+  width: auto;            /* let image keep aspect ratio */
+  max-width: 42ch;       /* limit width to ~one line of text */
+  max-height: 40vh;      /* prevent very tall images on small screens */
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
-  margin: 0.75rem auto; /* center the image */
+  margin: 0.75rem 0;     /* sit inline with text flow */
 }
 
-/* Optional class for explicit sizing if you prefer HTML <img class="item-photo"> */
+/* Optional explicit class for smaller images in content */
 .item-photo {
-  display: block;
-  width: 100%;
-  max-width: 480px;
+  display: inline-block;
+  width: auto;
+  max-width: 42ch;
   height: auto;
   border-radius: 8px;
-  margin: 0.75rem auto;
+  margin: 0 0.5rem 0.75rem 0;
 }
 
 /* Footer */
