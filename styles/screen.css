@@ -106,7 +106,27 @@ body.site {
 article h1, article h2 {
   color: var(--accent);
 }
-article img { max-width: 100%; border-radius: 8px; display: block; margin: 0.75rem 0; }
+
+/* Constrain large item photos on item pages */
+article img {
+  display: block;
+  width: 100%;
+  max-width: 640px;     /* limit large widths */
+  max-height: 420px;    /* limit tall images */
+  object-fit: cover;    /* crop if necessary while preserving fill */
+  border-radius: 8px;
+  margin: 0.75rem auto; /* center the image */
+}
+
+/* Optional class for explicit sizing if you prefer HTML <img class="item-photo"> */
+.item-photo {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  border-radius: 8px;
+  margin: 0.75rem auto;
+}
 
 /* Footer */
 .site-footer {
